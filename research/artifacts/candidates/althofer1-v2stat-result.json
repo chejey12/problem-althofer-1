@@ -1,0 +1,33 @@
+{
+ "experiment": "althofer-1 v2 sequence statistics X=7 n0=3 20000 steps",
+ "x": 7,
+ "n0": 3,
+ "v2_distribution": {
+  "0": 0,
+  "1": 9987,
+  "2": 5088,
+  "3": 2482,
+  "4": 1246,
+  "5": 611,
+  "6": 293,
+  "7": 141
+ },
+ "E_v2_observed": 1.9876,
+ "P_v2_ge_3": 0.2462,
+ "mean_bits_growth_per_step": 0.8198,
+ "theoretical_drift_bits": "log2(7) - E[v2] = 2.807 - 2.0 = 0.807",
+ "window_drifts_1000step": [
+  872,
+  760,
+  824,
+  898,
+  748,
+  833,
+  769,
+  860
+ ],
+ "monotone_growth": true,
+ "note": "v2 distribution for 7n+1 with the observed orbit stays near geometric mean 2, giving positive drift 0.807 bits/step. A rigorous unboundedness proof would need a lower bound on the running minimum of the drifted random walk (e.g. via martingale concentration or a v2 tail bound), which remains the open gap.",
+ "generated_at": "2026-09-17T03:11:57.491776+00:00",
+ "claim_status": "candidate_numeric_check_only"
+}

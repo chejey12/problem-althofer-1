@@ -1,0 +1,122 @@
+{
+ "schema_version": "1.1.0",
+ "channel": "chatgpt-web-github-issue-pr-writer",
+ "repository": "vibemathing/problem-althofer-1",
+ "repository_identity": {
+  "binding_state": "verified",
+  "database_id": 1361064089,
+  "node_id": "R_kgDOUSAwmQ",
+  "default_branch": "main"
+ },
+ "problem_id": "problem:althofer-1",
+ "problem_contract_sha256": "598c70d654b253d093a08973191bd8c57cef9912575a270e762df4bceb52f7a6",
+ "harness_snapshot_sha256": "0e611b22e233d218c57249b2035397f4934b31dd298d2614ed3509d6098c9ebf",
+ "base_revision": "a57b1a394572a1e9804f075536465859d802d915",
+ "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+ "attempt_id": "attempt:althofer1-001",
+ "route_id": "route:divergence-search",
+ "graph_id": "graph:althofer1-001-v1",
+ "obligation_id": "obligation:root",
+ "generator": {
+  "principal": "chejey12-hermes-agent",
+  "model_label": "hermes-glm-5.3-flash",
+  "model_fingerprint_status": "unverified"
+ },
+ "transport": {
+  "branch": "web/attempt-001-divergence",
+  "issue_number": 1,
+  "issue_url": "https://github.com/vibemathing/problem-althofer-1/issues/1",
+  "pull_request_number": null,
+  "pull_request_url": null
+ },
+ "objective": "Divergence witness search for odd(X*n+1), X>=5: X=7 n0=3 grows 0.82 bits/step over 20000 steps without cycle; v2 tail exactly geometric.",
+ "candidate_artifacts": [
+  {
+   "candidate_id": "candidate:althofer1-search-py",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1_search.py",
+   "sha256": "31b8710fcc4e33ee0f8bb71dd78e5d0d97c0591144a6afb2ac7ed9a367d2a8a3"
+  },
+  {
+   "candidate_id": "candidate:althofer1-witness-search-json",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-witness-search.json",
+   "sha256": "7d5590d9f773fc73edaf6811332ac08e13b748bb80b0668fc048c83110de8d57"
+  },
+  {
+   "candidate_id": "candidate:althofer1-orbit-cert-py",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-orbit-cert.py",
+   "sha256": "e96a52ffc0ccdc40043b9ef1c8d4b2825d6ba3ad2365b1d2dd5b9aff1cf475c9"
+  },
+  {
+   "candidate_id": "candidate:althofer1-orbit-cert-json",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-orbit-cert.json",
+   "sha256": "7939b45782e3ac26b5311eb0f34d5aff4682628b57cf81b127aabde2a0e24e33"
+  },
+  {
+   "candidate_id": "candidate:althofer1-v2stat-py",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-v2stat.py",
+   "sha256": "a612225e1105151411ad529506dcacfd7ead7bea11f05bcb79ed17f5744b9aa1"
+  },
+  {
+   "candidate_id": "candidate:althofer1-v2stat-result-json",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-v2stat-result.json",
+   "sha256": "4f466443a08bc2297477d9a3463066e6efa8bf61359e2f9f514f0c3948f4340e"
+  },
+  {
+   "candidate_id": "candidate:althofer1-rigor-py",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-rigor.py",
+   "sha256": "1112a4e14789d4c55c3b8ffb7fecb378a53bdc277114859b8c03076fce9f3655"
+  },
+  {
+   "candidate_id": "candidate:althofer1-rigor-result-json",
+   "kind": "computation",
+   "locator": "research/artifacts/candidates/althofer1-rigor-result.json",
+   "sha256": "b9087bef0dfa5fea77175dfe4e496757f8d5ee1d7744a7126b035b3a128fd375"
+  }
+ ],
+ "atomic_claims": [
+  {
+   "claim_id": "claim:witness-x7-n3",
+   "text": "Orbit of n(t+1)=odd(7*n(t)+1) from n0=3 grows ~0.82 bits/step for 20000 steps (max 16396 bits), no cycle detected (hash-based).",
+   "status": "candidate"
+  },
+  {
+   "claim_id": "claim:v2-tail-exact",
+   "text": "For uniform random odd n, v2(7n+1) satisfies P(v2 >= k) = 2^-(k-1) exactly (verified by enumeration mod 2^K, K=1..11); E[v2] = 2.",
+   "status": "candidate"
+  }
+ ],
+ "assumptions": [
+  "Python 3.11 exact integer arithmetic",
+  "Step budget 20000",
+  "Hash-based cycle detection has negligible collision probability"
+ ],
+ "risks": [
+  "Bounded-step divergence is not an infinite-orbit proof",
+  "Model-generated code not independently verified"
+ ],
+ "open_obligations": [
+  "obligation:root"
+ ],
+ "failed_route_proposal": null,
+ "source_refs": [
+  {
+   "repository": "vibemathing/problem-althofer-1",
+   "path": "problem-library/records/canonical-problems.jsonl",
+   "revision": "a57b1a394572a1e9804f075536465859d802d915",
+   "relation": "exact"
+  }
+ ],
+ "requested_verification": [
+  "numeric_check",
+  "statement_faithfulness"
+ ],
+ "verdict": "candidate_only",
+ "created_at": "2026-09-17T03:22:00Z"
+}

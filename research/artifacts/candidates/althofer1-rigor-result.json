@@ -1,0 +1,73 @@
+{
+ "experiment": "althofer-1 rigorous v2 tail computation (exact enumeration)",
+ "method": "exact residue-class enumeration mod 2^K, K=1..11",
+ "x": 7,
+ "tail_computation": [
+  {
+   "K": 1,
+   "P_v2_ge_K_exact": 1.0,
+   "theoretical": 1
+  },
+  {
+   "K": 2,
+   "P_v2_ge_K_exact": 0.5,
+   "theoretical": 0.5
+  },
+  {
+   "K": 3,
+   "P_v2_ge_K_exact": 0.25,
+   "theoretical": 0.25
+  },
+  {
+   "K": 4,
+   "P_v2_ge_K_exact": 0.125,
+   "theoretical": 0.125
+  },
+  {
+   "K": 5,
+   "P_v2_ge_K_exact": 0.0625,
+   "theoretical": 0.0625
+  },
+  {
+   "K": 6,
+   "P_v2_ge_K_exact": 0.03125,
+   "theoretical": 0.03125
+  },
+  {
+   "K": 7,
+   "P_v2_ge_K_exact": 0.015625,
+   "theoretical": 0.015625
+  },
+  {
+   "K": 8,
+   "P_v2_ge_K_exact": 0.0078125,
+   "theoretical": 0.0078125
+  },
+  {
+   "K": 9,
+   "P_v2_ge_K_exact": 0.00390625,
+   "theoretical": 0.00390625
+  },
+  {
+   "K": 10,
+   "P_v2_ge_K_exact": 0.001953125,
+   "theoretical": 0.001953125
+  },
+  {
+   "K": 11,
+   "P_v2_ge_K_exact": 0.0009765625,
+   "theoretical": 0.0009765625
+  }
+ ],
+ "theorem_candidate": {
+  "statement": "For X=7 and every odd starting value n0, the orbit n(t+1)=odd(7*n(t)+1) diverges to infinity with probability 1 (w.r.t. no randomness needed: actually for deterministic orbit from fixed n0, we show the trajectory from n0=3 is unbounded via the following argument).",
+  "argument_sketch": [
+   "Step 1: For uniform random odd n, v2(7n+1) is exactly geometrically distributed with P(v2 >= k) = 2^-(k-1), k >= 1 (verified by exact enumeration mod 2^K up to K=11).",
+   "Step 2: E[v2] = 2 exactly, so expected per-step drift = log2(7) - 2 = log2(7/4) ≈ 0.807 > 0.",
+   "Step 3: However, the actual orbit from n0=3 is deterministic; converting distributional drift to a.s. divergence for a single deterministic orbit requires additional argument (e.g. showing v2(t) does not consistently exceed log2(7)).",
+   "Open gap: v2(t) is deterministic given n(t); the tail bound P(v2 >= k) = 2^-(k-1) holds for random n but along one orbit it may be adversarial. Numerically the orbit stays near geometric distribution for 20000 steps (see companion artifact), supporting but not proving unboundedness."
+  ]
+ },
+ "generated_at": "2026-09-17T03:12:41.803500+00:00",
+ "claim_status": "candidate_numeric_check_only"
+}

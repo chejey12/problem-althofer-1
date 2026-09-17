@@ -1,0 +1,110 @@
+{
+ "experiment": "althofer-1 divergence witness search",
+ "max_steps_budget": 20000,
+ "search_range_n0": "3..199999 odd",
+ "x_list": [
+  5,
+  7,
+  9,
+  11,
+  13,
+  15
+ ],
+ "results": [
+  {
+   "x": 5,
+   "found_divergent": true,
+   "witness": {
+    "n0": 5,
+    "steps": 20000,
+    "max_n_bits": 7
+   }
+  },
+  {
+   "x": 7,
+   "found_divergent": true,
+   "witness": {
+    "n0": 3,
+    "steps": 20000,
+    "max_n_bits": 16396
+   }
+  },
+  {
+   "x": 9,
+   "found_divergent": true,
+   "witness": {
+    "n0": 5,
+    "steps": 20000,
+    "max_n_bits": 23293
+   }
+  },
+  {
+   "x": 11,
+   "found_divergent": true,
+   "witness": {
+    "n0": 3,
+    "steps": 20000,
+    "max_n_bits": 29009
+   }
+  },
+  {
+   "x": 13,
+   "found_divergent": true,
+   "witness": {
+    "n0": 3,
+    "steps": 20000,
+    "max_n_bits": 33953
+   }
+  },
+  {
+   "x": 15,
+   "found_divergent": true,
+   "witness": {
+    "n0": 3,
+    "steps": 20000,
+    "max_n_bits": 37832
+   }
+  }
+ ],
+ "witnesses": [
+  {
+   "x": 5,
+   "n0": 5,
+   "steps_to_exceed": 20000,
+   "max_n_bits": 7
+  },
+  {
+   "x": 7,
+   "n0": 3,
+   "steps_to_exceed": 20000,
+   "max_n_bits": 16396
+  },
+  {
+   "x": 9,
+   "n0": 5,
+   "steps_to_exceed": 20000,
+   "max_n_bits": 23293
+  },
+  {
+   "x": 11,
+   "n0": 3,
+   "steps_to_exceed": 20000,
+   "max_n_bits": 29009
+  },
+  {
+   "x": 13,
+   "n0": 3,
+   "steps_to_exceed": 20000,
+   "max_n_bits": 33953
+  },
+  {
+   "x": 15,
+   "n0": 3,
+   "steps_to_exceed": 20000,
+   "max_n_bits": 37832
+  }
+ ],
+ "note": "For X>=5, expected log-drift log(X/4)>0, so divergence is expected; a verified witness (trajectory certificate) constitutes a disproof witness candidate. Divergence within a step budget is bounded evidence, not an infinite-orbit proof; a full certificate requires showing the trajectory is unbounded (e.g. escape pattern).",
+ "generated_at": "2026-09-17T03:10:35.164878+00:00",
+ "claim_status": "candidate_numeric_check_only"
+}

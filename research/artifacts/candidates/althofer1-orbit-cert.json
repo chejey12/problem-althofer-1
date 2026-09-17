@@ -1,0 +1,49 @@
+{
+ "experiment": "althofer-1 orbit certificate X=7 n0=3",
+ "x": 7,
+ "n0": 3,
+ "steps": 20000,
+ "no_cycle_detected_within_budget": true,
+ "cycle": null,
+ "max_n_bits": 16396,
+ "final_n_bits": 16396,
+ "growth_rate_bits_per_step": 0.82,
+ "theoretical_expectation": "log2(7/4) = 0.807 bits/step expected growth",
+ "orbit_samples": [
+  {
+   "step": 0,
+   "n_bits": 4
+  },
+  {
+   "step": 2500,
+   "n_bits": 2062
+  },
+  {
+   "step": 5000,
+   "n_bits": 4107
+  },
+  {
+   "step": 7500,
+   "n_bits": 6118
+  },
+  {
+   "step": 10000,
+   "n_bits": 8283
+  },
+  {
+   "step": 12500,
+   "n_bits": 10273
+  },
+  {
+   "step": 15000,
+   "n_bits": 12252
+  },
+  {
+   "step": 17500,
+   "n_bits": 14285
+  }
+ ],
+ "note": "Trajectory of odd(7n+1) from n0=3 grows ~0.8 bits/step for 20000 steps without cycle detection (hash-based, collision negligible). This is bounded evidence of divergence; a complete disproof witness needs a proof that growth continues unboundedly (e.g. showing n(t) >= c * (7/4)^t for all t via v2 distribution argument).",
+ "generated_at": "2026-09-17T03:11:13.588299+00:00",
+ "claim_status": "candidate_numeric_check_only"
+}
